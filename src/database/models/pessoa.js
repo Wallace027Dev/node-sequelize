@@ -20,10 +20,12 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     cpf: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN,
-    role: DataTypes.STRING
+    role: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Pessoa',
+    tableName: 'pessoas',
+    paranoid: true,
   });
   return Pessoa;
 };
